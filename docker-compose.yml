@@ -1,0 +1,17 @@
+version: "3"
+services:
+  fe:
+    build:
+      context: client
+      dockerfile: v2.dockerfile
+    image: blindspot.ai/docker-tt-fe
+    ports:
+      - 4200:4200
+
+  be:
+    build:
+      context: sample-2
+      dockerfile: v2.dockerfile
+    image: blindspot.ai/docker-tt-be
+    ports:
+      - 5000:5000
